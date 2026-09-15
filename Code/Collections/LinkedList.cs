@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-
+// https://www.geeksforgeeks.org/dsa/doubly-linked-list-tutorial/ 
+// https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1?view=net-10.0
 namespace GA.Collections
 {
 	public class LinkedList<T> : ICollection<T>
@@ -9,15 +10,19 @@ namespace GA.Collections
 		{
 			public T Value { get; set; }
 			public Node Next { get; set; }
+			public Node Previous {get; set;}
 
-			public Node() : this(default(T))
+			// i had to install .Net 10.0 and after I did the code broke from here even tho it worked before that
+			// I used Copilots explaining to solve this one and i am not sure if this is the best solution..
+			public Node() : this(default, null, null)
 			{
 			}
 
-			public Node(T value, Node next = null)
+			public Node(T value, Node next = null, Node previous = null)
 			{
 				Value = value;
 				Next = next;
+				Previous = previous;
 			}
 		}
 
@@ -52,6 +57,7 @@ namespace GA.Collections
 				}
 
 				current.Next = node;
+				node.Previous = current;
 			}
 
 			Count++;
