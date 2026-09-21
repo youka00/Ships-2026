@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-// https://www.geeksforgeeks.org/dsa/doubly-linked-list-tutorial/ 
+// https://www.geeksforgeeks.org/dsa/doubly-linked-list-tutorial/
 // https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1?view=net-10.0
 namespace GA.Collections
 {

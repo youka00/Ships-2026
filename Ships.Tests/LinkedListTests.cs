@@ -27,7 +27,9 @@ public class LinkedListTests
 		Assert.Equal(2, list.Count);
 		Assert.DoesNotContain(6, list);
 	}
-	
+	// private Cell[,]
+	// tämä meinaa 2 uloittesta listaa
+
 	[Fact]
 	public void TestContains()
 	{
@@ -36,8 +38,9 @@ public class LinkedListTests
 		list.Add(1);
 		list.Add(6);
 		list.Add(-1);
-
-		Assert.True(list.Contains(6));
+		// Assert is true because list does contain 6
+		// Assert checks if there is 10 inside the list
+		Assert.Contains(6, list);
 		Assert.DoesNotContain(10, list);
 		// after installin the new version of .Net my Assert.False did not work. it did work while i used .net 8.0
 		// Changed Assert.False to Assert.DoesNotContain with microsoft learns help
