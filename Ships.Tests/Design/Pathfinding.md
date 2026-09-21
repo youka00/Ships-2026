@@ -11,7 +11,7 @@ Favorable = 0.5
 Adverse current = 2 / 3
 
 
-## 3. Pseudo code
+## 2. Pseudo code
     function GetCellCost(position):
     hits = check what is at position
 
