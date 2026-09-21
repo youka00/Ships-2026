@@ -12,8 +12,7 @@ Adverse current = 2 / 3
 
 
 ## 3. Pseudo code
-
-function GetCellCost(position):
+    function GetCellCost(position):
     hits = check what is at position
 
     if nothing hit:
@@ -28,6 +27,7 @@ function GetCellCost(position):
 
     return cost
 
-function BuildGrid():
+    function BuildGrid():
     for each cell in grid:
-        cell.cost = GetCellCost(cell center position)
+        cell.cost = GetCellCost(cell center position) // not sure if this is the correct way to do this? Made this code based on tutorials which explained
+        // pseudo codes
